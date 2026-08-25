@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sign Up</title>
+</head>
+<body>
+    <a href="/">&larr; BACK TO HOME</a>
+  <h1>Sign Up</h1>
+  <form action="/sign-up" method="POST">
+    <div>
+        <input id="username" name="username" placeholder="username" type="text" />
+    </div>
+    <div>
+        <input id="password" name="password" type="password" placeholder="password"/>
+    </div>
+    
+    
+    <button type="submit">Sign Up</button>
+  </form>
+
+  <style>
+    *{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    body{
+      background-color: black;
+      color: white;
+      padding:50px;
+    }
+    form{
+      display: block;
+      background: transparent;
+      color: white;
+    }
+
+    h1{
+      font-weight: 400;
+    }
+    button{
+      background-color: black;
+      color: white;
+
+      padding: 10 20px;
+      border:1px solid white;
+    }
+    div{
+      margin: 10px 0 10px 0;
+    }
+    a{
+        text-decoration: none;
+        color: white;
+        font-weight: 200;
+        font-style: italic;
+    }
+  </style>
+</body>
+</html>
