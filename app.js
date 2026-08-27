@@ -11,13 +11,18 @@ require('dotenv').config();
   console.log('DB_PASSWORD:', process.env.DB_PASSWORD);
   console.log('--- env check done ---');
 
-const pool = new Pool({
-  user: "postgres",        // From Username [postgres]
-  host: "localhost",      // From Server [localhost]
-  database: "postgres",   // From Database [postgres]
-  password: process.env.db, // The password you typed at the prompt //////////////////////////////////////
-  port: 5432,             // From Port [5432]
+
+  const pool = new Pool({
+  connectionString: process.env.DATABASE_URL, // Render gives you this directly
+  ssl: { rejectUnauthorized: false } // often required for hosted Postgres
 });
+// const pool = new Pool({
+//   user: "postgres",        // From Username [postgres]
+//   host: "localhost",      // From Server [localhost]
+//   database: "postgres",   // From Database [postgres]
+//   password: process.env.db, // The password you typed at the prompt //////////////////////////////////////
+//   port: 5432,             // From Port [5432]
+// });
 
 
 const app = express();
